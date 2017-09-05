@@ -3,13 +3,20 @@
     <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
-    <h1>Certificate Crossover</h1>
-    <div id="menu"></div>
-    <div id="main"></div>
-    <script
+    <h1>Website Directory</h1>
+    <div id="linkarea"></div>
+    <script>
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script>
+		document.ready(function() {
+			$.get("https://api.github.com/users/blucheez/repos", function(data) {
+				console.log(data);
+			);
+		});
+	</script>
+  <script>
+  </script>
   </body>
 </html>
