@@ -1,18 +1,3 @@
 * {
   text-align: center;
 }
-
-.choice {
-  display: inline-block;
-  width: 20%;
-}
-
-.choice:hover {
-  background-color: cyan;
-}
-
-#search {
-  display: block;
-  margin: 0 auto;
-  font-size: 4em;
-}
