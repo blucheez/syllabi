@@ -5,15 +5,22 @@
   <body>
     <h1>Website Directory</h1>
     <div id="linkarea"></div>
-    <script>
+    <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-    <script type="text/js">
-		document.ready(function() {
+    <script>
+		$(document).ready(function() {
 			$.get("https://api.github.com/users/blucheez/repos", function(data) {
-				console.log(data);
-			);
+				//have an array of all of the repositories enabled
+                //go through each element and add a link if there's a pages
+                for(var i = 0; i < data.length; i++) {
+                    if(data[i].has_pages) {
+                        console.log("https://blucheez.github.io/" + data[i].name);
+                        $("#linkarea").append('<a href=https://blucheez.github.io/' + data[i].name + '>'+ data[i].name + '</a><br>');
+                    }
+                }
+            });
 		});
 	</script>
   </body>
