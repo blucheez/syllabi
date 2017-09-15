@@ -4,25 +4,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
-    <h1>Website Directory</h1>
-    <div id="linkarea"></div>
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-    <script>
-		$(document).ready(function() {
-			$.get("https://api.github.com/users/blucheez/repos", function(data) {
-				//have an array of all of the repositories enabled
-                //go through each element and add a link if there's a pages
-                for(var i = 0; i < data.length; i++) {
-                    if(data[i].has_pages) {
-                        console.log("https://blucheez.github.io/" + data[i].name);
-                        $("#linkarea").append('<a href=https://blucheez.github.io/' + data[i].name + '>'+ data[i].name + '</a><br>');
-                    }
-                }
-            });
-		});
-	</script>
+    <h1>Syllabus Directory</h1>
+	  <a href="https://blackboard.princeton.edu/webapps/blackboard/content/listContent.jsp?course_id=_5499370_1&content_id=_2123158_1&mode=reset">MAT 201</a>
+	  <a href="https://blackboard.princeton.edu/webapps/blackboard/content/listContent.jsp?course_id=_5620370_1&content_id=_2123683_1&mode=reset">PHY 103</a>
+	  <a href="https://blackboard.princeton.edu/webapps/blackboard/content/listContent.jsp?course_id=_5763370_1&content_id=_2129350_1&mode=reset">SPA 108</a>
+	  <a href="https://blackboard.princeton.edu/webapps/blackboard/content/listContent.jsp?course_id=_6115487_1&content_id=_2146985_1&mode=reset">WRI 189</a>
+	  <a href="https://blackboard.princeton.edu/webapps/blackboard/content/listContent.jsp?course_id=_5014370_1&content_id=_2121475_1&mode=reset">CBE 262</a>
   </body>
 </html>
